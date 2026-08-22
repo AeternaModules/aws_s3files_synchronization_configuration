@@ -1,7 +1,3 @@
-output "s3files_synchronization_configurations_id" {
-  description = "Map of id values across all s3files_synchronization_configurations, keyed the same as var.s3files_synchronization_configurations"
-  value       = { for k, v in aws_s3files_synchronization_configuration.s3files_synchronization_configurations : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "s3files_synchronization_configurations_expiration_data_rule" {
   description = "Map of expiration_data_rule values across all s3files_synchronization_configurations, keyed the same as var.s3files_synchronization_configurations"
   value       = { for k, v in aws_s3files_synchronization_configuration.s3files_synchronization_configurations : k => v.expiration_data_rule if v.expiration_data_rule != null && length(v.expiration_data_rule) > 0 }
